@@ -1,0 +1,53 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{fontspec}
+
+\setmainfont{Times New Roman}
+
+\usepackage[utf8]{inputenc} % Este pacote serve para acentuação
+
+\usepackage[brazil]{babel} % Este pacote coloca os nomes em pt-br
+
+\usepackage{setspace} % Adiciona o pacote para configurar o espaçamento
+\onehalfspacing % Define o espaçamento como 1,5
+\usepackage[a4paper, left=3cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+ % Este pacote altera a margem do documento
+
+\usepackage{lipsum}
+
+
+\usepackage{titletoc}
+\usepackage{tocloft}
+
+\renewcommand{\cfttoctitlefont}{\bfseries\MakeUppercase}
+
+%\renewcommand{\cftsecfont}{\bfseries}
+%\renewcommand{\cftsubsecfont}{\bfseries}
+%\renewcommand{\cftsubsubsecfont}{\bfseries}
+
+
+\titlecontents{section}[1.5em]
+{\bfseries\normalsize}
+{\thecontentslabel.\enspace}
+{}
+{\titlerule*[0.75pc]{.}\contentspage}
+
+\titlecontents{subsection}[2em]
+{\bfseries\normalsize}
+{\thecontentslabel.\enspace}
+{}
+{\titlerule*[0.75pc]{.}\contentspage}
+
+\titlecontents{subsubsection}[2.5em]
+{\bfseries\normalsize}
+{\thecontentslabel.\enspace}
+{}
+{\titlerule*[0.75pc]{.}\contentspage}
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\newcommand{\subsubsubsubsection}[1]{\paragraph{#1}\mbox{}\\}
+
+%\usepackage{titlesec}
+%\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+
